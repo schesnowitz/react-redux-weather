@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchWeather } from '../actions/index';
-import {Sparklines, SparklinesLine} from 'react-sparklines';
+import Chart from '../components/chart';
 
 class WeatherList extends Component {
 
@@ -13,9 +13,7 @@ class WeatherList extends Component {
 		<tr key={cityData.city.name}>
     <th>{cityData.city.name}</th>
     <th>
-      <Sparklines height={123} width={180} data={temps}>
-      <SparklinesLine color="red" />
-      </Sparklines>
+    <Chart data={temps} color='blue'/>
     </th>
 		</tr>
     );

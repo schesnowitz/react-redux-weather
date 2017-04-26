@@ -22,7 +22,7 @@ class WeatherList extends Component {
 		<tr key={cityData.city.name}>
     <td><GoogleMap lon={lon} lat={lat} /></td>
     <th><Chart data={celsius} color='red' units="°C"/></th>
-    <th><Chart data={fahrenheit} color='red' units="F"/></th>
+    <th><Chart data={fahrenheit} color='red' units="°F"/></th>  
     <th><Chart data={kilopascal} color='blue' units="kPa"/></th>
     <th><Chart data={humidity} color='green' units="%"/></th>
 		</tr>
@@ -30,7 +30,7 @@ class WeatherList extends Component {
   }
   render() {
     return (
-<table className="table table-hover">
+<table className="table table-hover table-responsive">
 	<thead>
 		<tr>
 			<th>City</th>
